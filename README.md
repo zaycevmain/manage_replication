@@ -44,6 +44,7 @@
 # На основном сервере (где запускается скрипт)
 sudo apt update
 sudo apt install sshpass rsync
+sudo apt install git
 
 # На резервных серверах (устанавливаются автоматически)
 # - openjdk-17-jdk
@@ -57,19 +58,22 @@ sudo apt install sshpass rsync
 
 ### 1. Загрузка скрипта
 ```bash
-# Создайте рабочую директорию
-mkdir ~/pgreplication && cd ~/pgreplication
+# Уйдите на верхний уровень системы
+cd
 
-# Скачайте скрипт
-wget https://raw.githubusercontent.com/your-repo/pgreplication/main/manage_replication.sh
+# Склонируйте репозиторий
+git clone https://github.com/zaycevmain/manage_replication
+
+#Войдите в директорию
+cd ./manage_replication
 
 # Дайте права на выполнение
-chmod +x manage_replication.sh
+chmod +x ./manage_replication.sh
 ```
 
 ### 2. Первый запуск
 ```bash
-./manage_replication.sh
+bash manage_replication.sh
 ```
 
 ---
