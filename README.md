@@ -64,7 +64,7 @@ cd
 # Склонируйте репозиторий
 git clone https://github.com/zaycevmain/manage_replication
 
-#Войдите в директорию
+# Войдите в директорию
 cd ./manage_replication
 
 # Дайте права на выполнение
